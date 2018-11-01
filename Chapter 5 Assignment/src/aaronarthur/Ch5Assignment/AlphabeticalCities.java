@@ -37,7 +37,7 @@ public class AlphabeticalCities {
 		city5 = input.nextLine();
 		
 		
-											// LOOP 1
+		
 		// Compare 1 and 2
 		if (city1.compareTo(city2) > 0) {
 			temp = city1;
@@ -50,6 +50,11 @@ public class AlphabeticalCities {
 			temp = city2;
 			city2 = city3;
 			city3 = temp;
+			if (city1.compareTo(city2) > 0) {
+				temp = city1;
+				city1 = city2;
+				city2 = temp;
+			}
 		}
 		
 		// Compare 3 and 4
@@ -57,6 +62,16 @@ public class AlphabeticalCities {
 			temp = city3;
 			city3 = city4;
 			city4 = temp;
+			if (city2.compareTo(city3) > 0) {
+				temp = city2;
+				city2 = city3;
+				city3 = temp;
+				if (city1.compareTo(city2) > 0) {
+					temp = city1;
+					city1 = city2;
+					city2 = temp;
+				}
+			}
 		}
 		
 		// Compare 4 and 5
@@ -64,98 +79,22 @@ public class AlphabeticalCities {
 			temp = city4;
 			city4 = city5;
 			city5 = temp;
+			if (city3.compareTo(city4) > 0) {
+				temp = city3;
+				city3 = city4;
+				city4 = temp;
+				if (city2.compareTo(city3) > 0) {
+					temp = city2;
+					city2 = city3;
+					city3 = temp;
+					if (city1.compareTo(city2) > 0) {
+						temp = city1;
+						city1 = city2;
+						city2 = temp;
+					}
+				}
+			}
 		}
-		
-		
-		
-											// LOOP 2
-		// Compare 1 and 2
-		if (city1.compareTo(city2) > 0) {
-			temp = city1;
-			city1 = city2;
-			city2 = temp;
-		}
-		
-		// Compare 2 and 3
-		if (city2.compareTo(city3) > 0) {
-			temp = city2;
-			city2 = city3;
-			city3 = temp;
-		}
-		
-		// Compare 3 and 4
-		if (city3.compareTo(city4) > 0) {
-			temp = city3;
-			city3 = city4;
-			city4 = temp;
-		}
-		
-		// Compare 4 and 5
-		if (city4.compareTo(city5) > 0) {
-			temp = city4;
-			city4 = city5;
-			city5 = temp;
-		}		
-		
-		
-											// LOOP 3
-		// Compare 1 and 2
-		if (city1.compareTo(city2) > 0) {
-			temp = city1;
-			city1 = city2;
-			city2 = temp;
-		}
-		
-		// Compare 2 and 3
-		if (city2.compareTo(city3) > 0) {
-			temp = city2;
-			city2 = city3;
-			city3 = temp;
-		}
-		
-		// Compare 3 and 4
-		if (city3.compareTo(city4) > 0) {
-			temp = city3;
-			city3 = city4;
-			city4 = temp;
-		}
-		
-		// Compare 4 and 5
-		if (city4.compareTo(city5) > 0) {
-			temp = city4;
-			city4 = city5;
-			city5 = temp;
-		}		
-		
-		
-											// LOOP 4
-		// Compare 1 and 2
-		if (city1.compareTo(city2) > 0) {
-			temp = city1;
-			city1 = city2;
-			city2 = temp;
-		}
-		
-		// Compare 2 and 3
-		if (city2.compareTo(city3) > 0) {
-			temp = city2;
-			city2 = city3;
-			city3 = temp;
-		}
-		
-		// Compare 3 and 4
-		if (city3.compareTo(city4) > 0) {
-			temp = city3;
-			city3 = city4;
-			city4 = temp;
-		}
-		
-		// Compare 4 and 5
-		if (city4.compareTo(city5) > 0) {
-			temp = city4;
-			city4 = city5;
-			city5 = temp;
-		}		
 		
 		
 		System.out.println("The cities in alphebetical order are "
